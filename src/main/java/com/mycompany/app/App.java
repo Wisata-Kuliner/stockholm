@@ -5,6 +5,9 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 
+import com.mycompany.app.Parking;
+import com.mycompany.app.Car;
+
 /**
  * Main Application Class
  *
@@ -19,9 +22,11 @@ public class App {
         	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         	
-        	bw.write( "Hello World!\n" );
         	// Get Command from shell
         	String str = br.readLine();
+        	// Initialize Object
+        	Parking lot = null;
+
         	// Check for the new command input
         	while(str != null){
         		// Get the command from string
@@ -30,12 +35,16 @@ public class App {
         		switch(command[0]){
         			// Create Parking Lot
         			case "create_parking_lot":
+        				lot = new Parking(Integer.parseInt(command[1]));
+        				bw.write(lot.toString());
         				break;
         			// Car park in the Parking Lot
         			case "park":
+        				bw.write(lot.park(new Car(command[1], command[2])));
         				break;
         			// Number of car leaving the Parking Lot
         			case "leave":
+        				bw.write(lot.leave(Integer.parseInt(command[1])));
         				break;
         			// Check registration number
         			case "registration_numbers_for_cars_with_colour":
