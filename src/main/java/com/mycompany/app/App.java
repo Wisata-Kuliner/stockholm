@@ -48,15 +48,19 @@ public class App {
         				break;
         			// Check registration number
         			case "registration_numbers_for_cars_with_colour":
+        				bw.write(lot.getPlateByColor(command[1]));
         				break;
         			// Check Slot Number for specific color
         			case "slot_numbers_for_cars_with_colour":
+        				bw.write(lot.getSlotByColor(command[1]));
         				break;
         			// Check slot Number for specific registration number
         			case "slot_number_for_registration_number":
+        				bw.write(lot.getSlotByPlate(command[1]));
         				break;
         			// Check the status of parking lot
         			default:
+        				bw.write(lot.status());
         				break;
         		}
         		// Print Output to Console
