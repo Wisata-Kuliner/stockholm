@@ -1,6 +1,6 @@
 # Parking Lot Application 
 
-## Take Home Test for GO-JEK Academy 2018
+## Take Home Test
 
 ## How the Applications Work
 
@@ -10,7 +10,7 @@ The application is console-based which can be executed from the terminal. The ge
 2. Every car will get their own ticket for specific slot.
 3. Driver must park their car in the specific slot.
 
-More detailed information can be found on the program source code or by clicking [here](https://drive.google.com/open?id=1Fe8i-5trpFjQvphoYUg_Vi86zAPNAfAe).
+More detailed information can be found on the program source code.
 
 Main Focus:
 * User can search cars that parked in the parking lot by their number plates or color.
@@ -37,13 +37,13 @@ These instructions will get you a copy of the project up and running on your loc
 3. Run the app
 
     ```bash
-    java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+    java -cp target/my-app-1.0-SNAPSHOT.jar com.herokuapp.parkour.App
     ```
 6. The app is now running! To check that the app is actually running,
 try to send an input file to it, for instance:
 
     ```bash
-    java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App < ${file_input}
+    java -cp target/my-app-1.0-SNAPSHOT.jar com.herokuapp.parkour.App < ${file_input}
     ```
 
     or type your own input `create_parking_lot 6` from your console. 
@@ -67,10 +67,6 @@ then they should already be installed.
 
 * [Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Java 8 SE SDK
 * [Maven](https://maven.apache.org/) - Project dependency system for Java
-
-## Authors
-
-* **Bryanza Novirahman** - *Computer Science Student University of Indonesia* - [LinkedIn](https://www.linkedin.com/in/bryanza-novirahman-902a94131)
 
 ## Important links
 * [Maven](https://maven.apache.org/)
